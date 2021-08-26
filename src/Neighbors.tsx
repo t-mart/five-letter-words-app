@@ -30,6 +30,14 @@ export function Neighbors(props: Props) {
   }
 
   setValidity(true)
-  const words = results.map((result) => <li>{result}</li>);
-  return <div>{words}</div>;
+  const words = results.map((result) => (
+  <li>
+    <a href={`/?word=${result}`} class="underline text-blue-700 hover:text-blue-900">{result}</a>
+  </li>
+  ));
+  return (
+  <div>
+    {words}
+  </div>
+  );
 }

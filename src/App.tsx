@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { Neighbors } from "./Neighbors";
 
 export function App() {
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState(new URL(window.location.href).searchParams.get("word") || "");
   const [validity, setValidity] = useState(false);
 
   const onInput = (e: Event) => {
